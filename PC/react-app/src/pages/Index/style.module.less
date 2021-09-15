@@ -1,0 +1,201 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+@media screen {
+    @media (max-width: 762px) {
+        .index {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            .nav {
+                position: relative;
+                height: 80px;
+                width: 100%;    
+                line-height: 80px;   
+                background-color: #272A33;
+                .logo {
+                    position: absolute;
+                    top: 10px;
+                    left: 50px;
+                    width: 182px;
+                    height: 60px;
+                    border: 0;
+                }
+                .ham {
+                    position: absolute;
+                    top:28px;
+                    right: 50px;
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+            .main {
+                flex: 1;
+                overflow: auto;
+                .main_login {
+                    display: flex;
+                    align-items: center;
+                    background-repeat: no-repeat;
+                    background-image: url('../../images/main_login.jpg');
+                    opacity: 0.8;
+                    width: 100%;
+                    height: 500px;
+                    .login_content {
+                        margin: 0 auto;
+                        opacity: 1;
+                        width: 600px;
+                        .title {
+                            width: 230px;
+                            text-align: left;
+                            font-size: xx-large;
+                            font-weight: bolder;
+                            color: white;
+                        }
+                        .content {
+                            margin-top: 30px;
+                            width: 400px;
+                            text-align: left;
+                            font-size: large;
+                            color: white;
+                        }
+                        .bar {
+                            text-align: left;
+                            overflow: auto;
+                            margin-top: 50px;
+                            height: 50px;
+                            .bar_register {
+                                border-radius: 5px;
+                                float: left;
+                                background-color:#F85F89 ;
+                                height: 50px;
+                                line-height: 50px;
+                                width: 120px;
+                                text-align: center;
+                                a {
+                                    color: white;
+                                    font-size: larger;
+                                    text-decoration: none;
+                                }
+                            }
+                            .bar_login {
+                                margin-left: 50px;
+                                border-radius: 5px;
+                                float: left;
+                                background-color:white ;
+                                height: 50px;
+                                line-height: 50px;
+                                width: 120px;
+                                text-align: center;
+                                a {
+                                    font-size: larger;
+                                    text-decoration: none;
+                                }
+                            }
+                        }
+                    }
+                }
+                .main_choose {
+                    background-image: url('../../images/main_login.jpg');
+                    opacity: 0.8;
+                    width: 100%;
+                    height: 500px;
+                    display: flex;
+                    align-items: center;
+                    .intro {
+                        margin: 0 auto;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: left;
+                        width: 90%;
+                        .intro_title {
+                            width: 400px;
+                            text-align: left;
+                            font-size: xx-large;
+                            font-weight: bolder;
+                            color: white;
+                        }
+                        .intro_content {
+                            margin-top: 30px;
+                            width: 400px;
+                            text-align: left;
+                            font-size: large;
+                            color: white;
+                        }
+                        .intro_example {
+                            padding: 7px 0 7px 20px;
+                            margin-top: 30px;
+                            width: 400px;
+                            text-align: left;
+                            font-size: large;
+                            color: white;
+                        }
+                        .bar_register {
+                            border-radius: 5px;
+                                float: left;
+                                background-color:#F85F89 ;
+                                height: 50px;
+                                line-height: 50px;
+                                width: 120px;
+                                text-align: center;
+                                a {
+                                    color: white;
+                                    font-size: larger;
+                                    text-decoration: none;
+                                }
+                        }
+                    }
+                }
+                .main_buy {
+                    background-color: #FAFBFE;
+                    width: 100%;
+                    .buy_title {
+                        margin: 0 auto;
+                        margin-top: 20px;
+                        width: 400px;
+                        text-align: center;
+                        font-size: xx-large;
+                        font-weight: bolder;
+                        color: black;
+                        height: 60px;
+                        border-bottom: 5px solid pink;
+                    }
+                    .buy_content {
+                        margin: 20px auto 10px auto;
+                        width: 600px;
+                        text-align: center;
+                        color: #959CA4;
+                    }
+                    .buy_func {
+                        list-style-type: none;
+                        .func_item {
+                            display: flex;
+                            align-items: center;
+                            flex-direction: row;
+                            img {
+                                width: 40px;
+                                height: 40px;
+                            }
+                            .item_intro {
+                                flex: 1;
+                                margin-left: 20px;
+                                .intro_title {
+                                    text-align: left;
+                                    font-weight: bold;
+                                }
+                                .intro_content {
+                                    color: #959CA4;
+                                    text-align: left;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}
+

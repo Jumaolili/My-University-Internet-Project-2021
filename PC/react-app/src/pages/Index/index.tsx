@@ -93,11 +93,43 @@ const Index:React.FC<Props>=(props)=>{
                         </li>    
                     </ul>
                 </section>
-                <section className={style.main_kinds}></section>
-                <div className={style.bottom}>
-                    <footer className={style.support}></footer>
-                    <div className={style.legal}></div>
-                </div>
+                <section className={style.main_join}>
+                    <div className={style.join}>
+                        <h4 className={style.join_title}>{'现在就开始'}</h4>
+                        <p className={style.join_content}>{'让我们和合作伙伴一同呈现 满足您的信息服务'}</p>
+                        <div className={style.join_btn}><a href="/register">{'注册并加入'}</a></div>
+                    </div>
+                </section>
+                <section className={style.bottom}>
+                    <footer className={style.support}>
+                        <section className={style.support_top}>
+                            <img className={style.top_logo} src={Logo} alt=""/>
+                            <h5 className={style.top_title_1}>{'Wanted & Selling 维护人员'}</h5>
+                            <ul className={style.top_connect}>
+                                <li><a href="">{'>橘猫粒粒 GitHub'}</a></li>
+                                <li><a href="">{'>联系站长'}</a></li>
+                            </ul>
+                            <h6 className={style.top_title_2}>{'我们的合作伙伴'}</h6>
+                            <ul className={style.top_friends}>
+                                <li><a href="">{'>太穷了，没有(～￣▽￣)～'}</a></li>
+                                <li><a href="">{'>太穷了，没有[]~(￣▽￣)~*'}</a></li>
+                                <li><a href="">{'>太穷了，没有(✿◡‿◡)'}</a></li>
+                                <li><a href="">{'>太穷了，没有○( ＾皿＾)っHiahiahia…'}</a></li>
+                            </ul>
+                        </section>
+                        <section className={style.support_bottom}>
+                            <h6>{'你还在等什么'}</h6>
+                            <div className={style.bottom_register}><a href="/register">{'立即注册>'}</a></div>
+                            <div className={style.bottom_login}><a href="/login">{'直接登录>'}</a></div>
+                        </section>
+                    </footer>
+                    <div className={style.legal}>
+                        <div className={style.legal_content}>
+                            <p>2020-2021&copy;Jumaolili Actually No rights reserved.</p>
+                            <p>萌ICP备114514号</p>
+                        </div>
+                    </div>
+                </section>
             </div>
         </div>
     )

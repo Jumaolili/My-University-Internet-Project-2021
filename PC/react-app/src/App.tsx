@@ -5,6 +5,8 @@ import './App.css';
 
 //引入页面
 import  Index  from "./pages/Index";
+import Login from './pages/Login';
+import Register from './pages/Register';
 
 //引入组件
 
@@ -15,6 +17,8 @@ function App() {
       <BrowserRouter>
           <Switch>
               <Route path="/index" component={Index}></Route>
+              <Route path="/login" component={Login}></Route>
+              <Route path="/register" component={Register}></Route>
               <Redirect from="/" to="/index" exact></Redirect>
           </Switch>
       </BrowserRouter>

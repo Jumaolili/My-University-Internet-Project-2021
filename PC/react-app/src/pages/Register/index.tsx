@@ -23,7 +23,7 @@ const Register:React.FC<Props>=(props)=>{
 
     return(
         <div>
-            index
+            Register
         </div>
     )
     

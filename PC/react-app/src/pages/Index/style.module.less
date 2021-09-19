@@ -4,8 +4,775 @@ body, html {
     height: 100%;
     overflow: hidden;
 }
+
+
+
+//0-450
 @media screen {
-    @media (max-width: 762px) {
+    @media (max-width: 450px) and (min-width:0px) {
+        html {
+            font-size: 12px;
+        }
+        .index {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            .nav {
+                position: relative;
+                height: 4rem;
+                width: 100%;    
+                line-height: 4rem;   
+                background-color: #272A33;
+                .logo {
+                    position: absolute;
+                    top: 1rem;
+                    left: 10%;
+                    width: 6rem;
+                    height: 2rem;
+                    border: 0;
+                }
+                .ham {
+                    position: absolute;
+                    top: 1.5rem;
+                    right: 10%;
+                    width: 1rem;
+                    height: 1rem;
+                    cursor: pointer;
+                }
+                .func_bar {
+                    position: absolute;
+                    z-index: 99;
+                    top: 4rem;
+                    height: 5rem;
+                    width: 100%;
+                    background-color: #272A33;
+                    overflow: auto;
+                    animation-name:fadeIn;
+                    animation-duration:2s;
+                    @keyframes slideout {
+                        from {
+                            height: 0rem;
+                            opacity: 0;
+                        }
+                        to {
+                            height: 5rem;
+                            opacity: 1;
+                        }
+                    }
+                    .bar_list {
+                        list-style-type: none;
+                        margin: 0;
+                        padding:0;
+                        .list_item {
+                            height: 2rem;
+                            line-height: 2rem;
+                            text-align: left;
+                            margin-left: 10%;
+                            cursor: pointer;
+                            &:hover {
+                                a {
+                                    color: white;
+                                }
+                            }
+                            a {
+                                text-decoration: none;
+                                color: #A0A2A6;
+                                transition: 0.3s ease-in-out;
+                            }
+                        }
+                    }
+                }
+            }
+            .main {
+                flex: 1;
+                overflow: auto;
+                .main_login {
+                    display: flex;
+                    align-items: center;
+                    background-size: cover;
+                    background-image: url('../../images/main_login.jpg');
+                    opacity: 0.8;
+                    width: 100%;
+                    height: 50rem;
+                    .login_content {
+                        margin: 0 auto;
+                        opacity: 1;
+                        width: 90%;
+                        .title {
+                            text-align: left;
+                            font-size: xx-large;
+                            font-weight: bolder;
+                            color: white;
+                        }
+                        .content {
+                            margin-top: 3rem;
+                            text-align: left;
+                            font-size: large;
+                            color: white;
+                        }
+                        .bar {
+                            text-align: left;
+                            margin-top: 5rem;
+                            height: 5rem;
+                            display: grid;
+                            grid-template-rows: 1fr 1fr;
+                            .bar_register {
+                                border-radius: 0.5rem;
+                                background-color:#F85F89 ;
+                                height: 5rem;
+                                line-height: 5rem;
+                                width: 12rem;
+                                text-align: center;
+                                a {
+                                    color: white;
+                                    font-size: larger;
+                                    text-decoration: none;
+                                }
+                            }
+                            .bar_login {
+                                margin-top: 1rem;
+                                border-radius: 0.5rem;
+                                background-color:white ;
+                                height: 5rem;
+                                line-height: 5rem;
+                                width: 12rem;
+                                text-align: center;
+                                a {
+                                    font-size: larger;
+                                    text-decoration: none;
+                                }
+                            }
+                        }
+                    }
+                }
+                .main_choose {
+                    background-image: url('../../images/main_login.jpg');
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    opacity: 0.8;
+                    width: 100%;
+                    height: 50rem;
+                    display: flex;
+                    align-items: center;
+                    .intro {
+                        margin: 0 auto;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: left;
+                        .intro_title {
+                            text-align: left;
+                            font-size: xx-large;
+                            font-weight: bolder;
+                            color: white;
+                        }
+                        .intro_content {
+                            margin-top: 3rem;
+                            text-align: left;
+                            font-size: large;
+                            color: white;
+                        }
+                        .intro_example {
+                            padding: 0.7rem 0 0.7rem 2rem;
+                            margin-top: 3rem;
+                            text-align: left;
+                            font-size: large;
+                            color: white;
+                        }
+                        .bar_register {
+                            border-radius: 0.5rem;
+                                float: left;
+                                background-color:#F85F89 ;
+                                height: 5rem;
+                                line-height: 5rem;
+                                width: 12rem;
+                                text-align: center;
+                                a {
+                                    color: white;
+                                    font-size: larger;
+                                    text-decoration: none;
+                                }
+                        }
+                    }
+                }
+                .main_buy {
+                    background-color: #FAFBFE;
+                    width: 100%;
+                    .buy_title {
+                        margin: 0 auto;
+                        margin-top: 2rem;
+                        text-align: center;
+                        font-size: xx-large;
+                        font-weight: bolder;
+                        color: black;
+                        height: 6rem;
+                        border-bottom: 0.5rem solid pink;
+                    }
+                    .buy_content {
+                        width: 90%;
+                        margin: 2rem auto 1rem auto;
+                        text-align: center;
+                        color: #959CA4;
+                    }
+                    .buy_func {
+                        width: 80%;
+                        list-style-type: none;
+                        .func_item {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            flex-direction: row;
+                            img {
+                                width: 4rem;
+                                height: 4rem;
+                            }
+                            .item_intro {
+                                flex: 1;
+                                margin-left: 2rem;
+                                .intro_title {
+                                    text-align: left;
+                                    font-weight: bold;
+                                }
+                                .intro_content {
+                                    color: #959CA4;
+                                    text-align: left;
+                                }
+                            }
+                        }
+                    }
+                }
+                .main_join {
+                    //join 加入
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-image: url('../../images/index_join.jpg');
+                    background-repeat: no-repeat;
+                    opacity: 0.6;
+                    width: 100%;
+                    height: 40rem;
+                    background-size: cover;
+                    margin-bottom: 0;
+                    .join {
+                        opacity: 1;
+                        width: 80%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        .join_title {
+                            margin: 0 auto;
+                            margin-top: 2rem;
+                            text-align: center;
+                            font-size: xx-large;
+                            font-weight: bolder;
+                            color: white;
+                            height: 6rem;
+                        }
+                        .join_content {
+                            color: black;
+                            font-weight: bold;
+                        }
+                        .join_btn {
+                            border-radius: 5px;
+                            float: left;
+                            background-color:#F85F89 ;
+                            height: 5rem;
+                            line-height: 5rem;
+                            width: 12rem;
+                            text-align: center;
+                            a {
+                                color: white;
+                                font-size: larger;
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+                .bottom {
+                    background-color: #272A33;
+                    width: 100%;
+                    .support {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        .support_top {
+                            text-align: left;
+                            width: 90%;
+                            .top_logo {
+                                width: 18.2rem;
+                                height: 6rem;
+                            }
+                            .top_title_1 {
+                                color: white;
+                                font-size: larger;
+                            }
+                            .top_connect {
+                                margin: 0;
+                                padding: 0;
+                                li {
+                                    a {
+                                        font-size:small;
+                                        opacity: 0.5;
+                                        text-decoration: none;
+                                        color: white;
+                                    }
+                                }
+
+                            }
+                            .top_title_2 {
+                                color: white;
+                                font-size: larger;
+                            }
+                            .top_friends {
+                                margin: 0;
+                                padding: 0;
+                                li {
+                                    a {
+                                        font-size:small;
+                                        opacity: 0.5;
+                                        text-decoration: none;
+                                        color: white;
+                                    }
+                                }
+                            }
+                        }
+                        .support_bottom {
+                            text-align: left;
+                            width: 90%;
+                            h6 {
+                                color: white;
+                                font-size: large;
+                            }
+                            .bottom_register {
+                                margin-bottom: 2rem;
+                                border-radius: 0.5rem;
+                                background-color:#F85F89 ;
+                                height: 5rem;
+                                line-height: 5rem;
+                                width: 12rem;
+                                text-align: center;
+                                a {
+                                    color: white;
+                                    font-size: larger;
+                                    text-decoration: none;
+                                }
+                            }
+                            .bottom_login {
+                                border-radius: 0.5rem;
+                                background-color:white ;
+                                height: 5rem;
+                                line-height: 5rem;
+                                width: 12rem;
+                                text-align: center;
+                                a {
+                                    font-size: larger;
+                                    text-decoration: none;
+                                }
+                            }
+                        }
+                    }
+                    .legal {
+                        background-color: #2E313A;
+                        width: 100%;
+                        height: 10rem;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        .legal_content {
+                            width: 90%;
+                            p {
+                                text-align: left;
+                                color: white;
+                                opacity: 0.6;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//450-762 -920
+@media screen {
+    @media (max-width: 920px) and (min-width:450px) {
+        html {
+            font-size: 12px;
+        }
+        .index {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            .nav {
+                position: relative;
+                height: 4rem;
+                width: 100%;    
+                line-height: 4rem;   
+                background-color: #272A33;
+                .logo {
+                    position: absolute;
+                    top: 1rem;
+                    left: 10%;
+                    width: 6rem;
+                    height: 2rem;
+                    border: 0;
+                }
+                .ham {
+                    position: absolute;
+                    top: 1.5rem;
+                    right: 10%;
+                    width: 1rem;
+                    height: 1rem;
+                    cursor: pointer;
+                }
+                .func_bar {
+                    position: absolute;
+                    z-index: 99;
+                    top: 4rem;
+                    height: 5rem;
+                    width: 100%;
+                    background-color: #272A33;
+                    overflow: auto;
+                    scrollbar-width: 0;
+                    .bar_list {
+                        list-style-type: none;
+                        margin: 0;
+                        padding:0;
+                        .list_item {
+                            height: 2rem;
+                            line-height: 2rem;
+                            text-align: left;
+                            margin-left: 10%;
+                            cursor: pointer;
+                            &:hover {
+                                a {
+                                    color: white;
+                                }
+                            }
+                            a {
+                                text-decoration: none;
+                                color: #A0A2A6;
+                                transition: 0.3s ease-in-out;
+                            }
+                        }
+                    }
+                }
+            }
+            .main {
+                flex: 1;
+                overflow: auto;
+                .main_login {
+                    display: flex;
+                    align-items: center;
+                    background-size: cover;
+                    background-image: url('../../images/main_login.jpg');
+                    opacity: 0.8;
+                    width: 100%;
+                    height: 50rem;
+                    .login_content {
+                        margin: 0 auto;
+                        opacity: 1;
+                        width: 80%;
+                        .title {
+                            text-align: left;
+                            font-size: xx-large;
+                            font-weight: bolder;
+                            color: white;
+                        }
+                        .content {
+                            margin-top: 3rem;
+                            text-align: left;
+                            font-size: large;
+                            color: white;
+                        }
+                        .bar {
+                            text-align: left;
+                            overflow: auto;
+                            margin-top: 5rem;
+                            height: 5rem;
+                            .bar_register {
+                                border-radius: 0.5rem;
+                                float: left;
+                                background-color:#F85F89 ;
+                                height: 5rem;
+                                line-height: 5rem;
+                                width: 12rem;
+                                text-align: center;
+                                a {
+                                    color: white;
+                                    font-size: larger;
+                                    text-decoration: none;
+                                }
+                            }
+                            .bar_login {
+                                margin-left: 5rem;
+                                border-radius: 0.5rem;
+                                float: left;
+                                background-color:white ;
+                                height: 5rem;
+                                line-height: 5rem;
+                                width: 12rem;
+                                text-align: center;
+                                a {
+                                    font-size: larger;
+                                    text-decoration: none;
+                                }
+                            }
+                        }
+                    }
+                }
+                .main_choose {
+                    background-image: url('../../images/main_login.jpg');
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    opacity: 0.8;
+                    width: 100%;
+                    height: 80rem;
+                    display: flex;
+                    align-items: center;
+                    .intro {
+                        margin: 0 auto;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: left;
+                        width: 80%;
+                        .intro_title {
+                            text-align: left;
+                            font-size: xx-large;
+                            font-weight: bolder;
+                            color: white;
+                        }
+                        .intro_content {
+                            margin-top: 3rem;
+                            text-align: left;
+                            font-size: large;
+                            color: white;
+                        }
+                        .intro_example {
+                            padding: 0.7rem 0 0.7rem 2rem;
+                            margin-top: 3rem;
+                            text-align: left;
+                            font-size: large;
+                            color: white;
+                        }
+                        .bar_register {
+                            border-radius: 0.5rem;
+                                float: left;
+                                background-color:#F85F89 ;
+                                height: 5rem;
+                                line-height: 5rem;
+                                width: 12rem;
+                                text-align: center;
+                                a {
+                                    color: white;
+                                    font-size: larger;
+                                    text-decoration: none;
+                                }
+                        }
+                    }
+                }
+                .main_buy {
+                    background-color: #FAFBFE;
+                    width: 100%;
+                    .buy_title {
+                        margin: 0 auto;
+                        margin-top: 2rem;
+                        text-align: center;
+                        font-size: xx-large;
+                        font-weight: bolder;
+                        color: black;
+                        height: 6rem;
+                        border-bottom: 0.5rem solid pink;
+                    }
+                    .buy_content {
+                        margin: 2rem auto 1rem auto;
+                        width: 90%;
+                        text-align: center;
+                        color: #959CA4;
+                    }
+                    .buy_func {
+                        list-style-type: none;
+                        .func_item {
+                            display: flex;
+                            align-items: center;
+                            flex-direction: row;
+                            img {
+                                width: 4rem;
+                                height: 4rem;
+                            }
+                            .item_intro {
+                                flex: 1;
+                                margin-left: 2rem;
+                                .intro_title {
+                                    text-align: left;
+                                    font-weight: bold;
+                                }
+                                .intro_content {
+                                    color: #959CA4;
+                                    text-align: left;
+                                }
+                            }
+                        }
+                    }
+                }
+                .main_join {
+                    //join 加入
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-image: url('../../images/index_join.jpg');
+                    background-repeat: no-repeat;
+                    opacity: 0.6;
+                    width: 100%;
+                    height: 100%;
+                    background-size: cover;
+                    margin-bottom: 0;
+                    .join {
+                        opacity: 1;
+                        width: 50rem;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        .join_title {
+                            margin: 0 auto;
+                            margin-top: 2rem;
+                            text-align: center;
+                            font-size: xx-large;
+                            font-weight: bolder;
+                            color: white;
+                            height: 6rem;
+                        }
+                        .join_content {
+                            color: black;
+                            font-weight: bold;
+                        }
+                        .join_btn {
+                            border-radius: 5px;
+                            float: left;
+                            background-color:#F85F89 ;
+                            height: 5rem;
+                            line-height: 5rem;
+                            width: 12rem;
+                            text-align: center;
+                            a {
+                                color: white;
+                                font-size: larger;
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+                .bottom {
+                    background-color: #272A33;
+                    width: 100%;
+                    .support {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        .support_top {
+                            text-align: left;
+                            width: 80%;
+                            .top_logo {
+                                width: 18.2rem;
+                                height: 6rem;
+                            }
+                            .top_title_1 {
+                                color: white;
+                                font-size: larger;
+                            }
+                            .top_connect {
+                                margin: 0;
+                                padding: 0;
+                                li {
+                                    a {
+                                        font-size:small;
+                                        opacity: 0.5;
+                                        text-decoration: none;
+                                        color: white;
+                                    }
+                                }
+
+                            }
+                            .top_title_2 {
+                                color: white;
+                                font-size: larger;
+                            }
+                            .top_friends {
+                                margin: 0;
+                                padding: 0;
+                                li {
+                                    a {
+                                        font-size:small;
+                                        opacity: 0.5;
+                                        text-decoration: none;
+                                        color: white;
+                                    }
+                                }
+                            }
+                        }
+                        .support_bottom {
+                            text-align: left;
+                            width: 80%;
+                            h6 {
+                                color: white;
+                                font-size: large;
+                            }
+                            .bottom_register {
+                                margin-bottom: 2rem;
+                                border-radius: 0.5rem;
+                                background-color:#F85F89 ;
+                                height: 5rem;
+                                line-height: 5rem;
+                                width: 12rem;
+                                text-align: center;
+                                a {
+                                    color: white;
+                                    font-size: larger;
+                                    text-decoration: none;
+                                }
+                            }
+                            .bottom_login {
+                                border-radius: 0.5rem;
+                                background-color:white ;
+                                height: 5rem;
+                                line-height: 5rem;
+                                width: 12rem;
+                                text-align: center;
+                                a {
+                                    font-size: larger;
+                                    text-decoration: none;
+                                }
+                            }
+                        }
+                    }
+                    .legal {
+                        background-color: #2E313A;
+                        width: 100%;
+                        height: 10rem;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        .legal_content {
+                            width: 80%;
+                            p {
+                                text-align: left;
+                                color: white;
+                                opacity: 0.6;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//920-1366
+@media screen {
+    @media (max-width: 1366px) and (min-width:920px) {
         html {
             font-size: 12px;
         }
@@ -28,11 +795,10 @@ body, html {
                     border: 0;
                 }
                 .ham {
-                    position: absolute;
-                    top:3rem;
-                    right: 5rem;
-                    width: 2.4rem;
-                    height: 2.4rem;
+                    display: none;
+                }
+                .func_bar {
+                    display: none;
                 }
             }
             .main {
@@ -49,7 +815,7 @@ body, html {
                     .login_content {
                         margin: 0 auto;
                         opacity: 1;
-                        width: 60rem;
+                        width: 80%;
                         .title {
                             width: 23rem;
                             text-align: left;
@@ -106,7 +872,7 @@ body, html {
                     background-repeat: no-repeat;
                     opacity: 0.8;
                     width: 100%;
-                    height: 50rem;
+                    height: 80rem;
                     display: flex;
                     align-items: center;
                     .intro {
@@ -114,7 +880,7 @@ body, html {
                         display: flex;
                         flex-direction: column;
                         align-items: left;
-                        width: 60rem;
+                        width: 80%;
                         .intro_title {
                             width: 40rem;
                             text-align: left;
@@ -159,17 +925,17 @@ body, html {
                     .buy_title {
                         margin: 0 auto;
                         margin-top: 2rem;
-                        width: 40rem;
                         text-align: center;
                         font-size: xx-large;
                         font-weight: bolder;
                         color: black;
                         height: 6rem;
+                        width: 40rem;
                         border-bottom: 0.5rem solid pink;
                     }
                     .buy_content {
                         margin: 2rem auto 1rem auto;
-                        width: 60rem;
+                        width: 90%;
                         text-align: center;
                         color: #959CA4;
                     }
@@ -220,7 +986,6 @@ body, html {
                         .join_title {
                             margin: 0 auto;
                             margin-top: 2rem;
-                            width: 40rem;
                             text-align: center;
                             font-size: xx-large;
                             font-weight: bolder;
@@ -257,7 +1022,7 @@ body, html {
                         justify-content: center;
                         .support_top {
                             text-align: left;
-                            width: 60rem;
+                            width: 80%;
                             .top_logo {
                                 width: 18.2rem;
                                 height: 6rem;
@@ -298,7 +1063,7 @@ body, html {
                         }
                         .support_bottom {
                             text-align: left;
-                            width: 60rem;
+                            width: 80%;
                             h6 {
                                 color: white;
                                 font-size: large;
@@ -339,7 +1104,7 @@ body, html {
                         justify-content: center;
                         align-items: center;
                         .legal_content {
-                            width: 60rem;
+                            width: 80%;
                             p {
                                 text-align: left;
                                 color: white;
@@ -353,4 +1118,696 @@ body, html {
     }
 }
 
+//1366-1920
+@media screen {
+    @media (max-width: 1920px) and (min-width:1366px) {
+        html {
+            font-size: 12px;
+        }
+        .index {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            .nav {
+                position: relative;
+                height: 8rem;
+                width: 100%;    
+                line-height: 8rem;   
+                background-color: #272A33;
+                .logo {
+                    position: absolute;
+                    top: 1rem;
+                    left: 5rem;
+                    width: 18rem;
+                    height: 6rem;
+                    border: 0;
+                }
+                .ham {
+                    display: none;
+                }
+                .func_bar {
+                    display: none;
+                }
+            }
+            .main {
+                flex: 1;
+                overflow: auto;
+                .main_login {
+                    display: flex;
+                    align-items: center;
+                    background-size: cover;
+                    background-image: url('../../images/main_login.jpg');
+                    opacity: 0.8;
+                    width: 100%;
+                    height: 50rem;
+                    .login_content {
+                        margin: 0 auto;
+                        opacity: 1;
+                        width: 80%;
+                        .title {
+                            text-align: left;
+                            font-size: 4rem;
+                            font-weight: bolder;
+                            color: white;
+                        }
+                        .content {
+                            margin-top: 3rem;
+                            width: 40rem;
+                            text-align: left;
+                            font-size: 2rem;
+                            color: white;
+                        }
+                        .bar {
+                            text-align: left;
+                            overflow: auto;
+                            margin-top: 5rem;
+                            height: 5rem;
+                            .bar_register {
+                                border-radius: 0.5rem;
+                                float: left;
+                                background-color:#F85F89 ;
+                                height: 5rem;
+                                line-height: 5rem;
+                                width: 12rem;
+                                text-align: center;
+                                a {
+                                    color: white;
+                                    font-size: larger;
+                                    text-decoration: none;
+                                }
+                            }
+                            .bar_login {
+                                margin-left: 5rem;
+                                border-radius: 0.5rem;
+                                float: left;
+                                background-color:white ;
+                                height: 5rem;
+                                line-height: 5rem;
+                                width: 12rem;
+                                text-align: center;
+                                a {
+                                    font-size: larger;
+                                    text-decoration: none;
+                                }
+                            }
+                        }
+                    }
+                }
+                .main_choose {
+                    background-image: url('../../images/main_login.jpg');
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    opacity: 0.8;
+                    width: 100%;
+                    height: 80rem;
+                    display: flex;
+                    align-items: center;
+                    .intro {
+                        margin: 0 auto;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: left;
+                        width: 80%;
+                        .intro_title {
+                            width: 40rem;
+                            text-align: left;
+                            font-size: 4rem;
+                            font-weight: bolder;
+                            color: white;
+                        }
+                        .intro_content {
+                            margin-top: 3rem;
+                            width: 40rem;
+                            text-align: left;
+                            font-size: 2rem;
+                            color: white;
+                        }
+                        .intro_example {
+                            padding: 0.7rem 0 0.7rem 2rem;
+                            margin-top: 3rem;
+                            width: 40rem;
+                            text-align: left;
+                            font-size: large;
+                            color: white;
+                        }
+                        .bar_register {
+                            border-radius: 0.5rem;
+                                float: left;
+                                background-color:#F85F89 ;
+                                height: 5rem;
+                                line-height: 5rem;
+                                width: 12rem;
+                                text-align: center;
+                                a {
+                                    color: white;
+                                    font-size: larger;
+                                    text-decoration: none;
+                                }
+                        }
+                    }
+                }
+                .main_buy {
+                    background-color: #FAFBFE;
+                    width: 100%;
+                    .buy_title {
+                        margin: 0 auto;
+                        margin-top: 2rem;
+                        text-align: center;
+                        font-size: 4rem;
+                        font-weight: bolder;
+                        color: black;
+                        height: 6rem;
+                        width: 40rem;
+                        border-bottom: 0.5rem solid pink;
+                    }
+                    .buy_content {
+                        font-size: 2rem;
+                        margin: 2rem auto 1rem auto;
+                        width: 90%;
+                        text-align: center;
+                        color: #959CA4;
 
+                    }
+                    .buy_func {
+                        list-style-type: none;
+                        .func_item {
+                            display: flex;
+                            align-items: center;
+                            flex-direction: row;
+                            img {
+                                width: 4rem;
+                                height: 4rem;
+                            }
+                            .item_intro {
+                                font-size: 2rem;
+                                flex: 1;
+                                margin-left: 2rem;
+                                .intro_title {
+                                    text-align: left;
+                                    font-weight: bold;
+                                }
+                                .intro_content {
+                                    color: #959CA4;
+                                    text-align: left;
+                                }
+                            }
+                        }
+                    }
+                }
+                .main_join {
+                    //join 加入
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-image: url('../../images/index_join.jpg');
+                    background-repeat: no-repeat;
+                    opacity: 0.6;
+                    width: 100%;
+                    height: 100%;
+                    background-size: cover;
+                    margin-bottom: 0;
+                    .join {
+                        opacity: 1;
+                        width: 50rem;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        .join_title {
+                            margin: 0 auto;
+                            margin-top: 2rem;
+                            text-align: center;
+                            font-size: 5rem;
+                            font-weight: bolder;
+                            color: white;
+                            height: 6rem;
+                        }
+                        .join_content {
+                            font-size:2rem;
+                            color: black;
+                            font-weight: bold;
+                        }
+                        .join_btn {
+                            border-radius: 5px;
+                            float: left;
+                            background-color:#F85F89 ;
+                            height: 5rem;
+                            line-height: 5rem;
+                            width: 12rem;
+                            text-align: center;
+                            a {
+                                color: white;
+                                font-size: larger;
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+                .bottom {
+                    background-color: #272A33;
+                    width: 100%;
+                    .support {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        .support_top {
+                            text-align: left;
+                            width: 80%;
+                            .top_logo {
+                                width: 18.2rem;
+                                height: 6rem;
+                            }
+                            .top_title_1 {
+                                color: white;
+                                font-size: larger;
+                            }
+                            .top_connect {
+                                margin: 0;
+                                padding: 0;
+                                li {
+                                    a {
+                                        font-size:small;
+                                        opacity: 0.5;
+                                        text-decoration: none;
+                                        color: white;
+                                    }
+                                }
+
+                            }
+                            .top_title_2 {
+                                color: white;
+                                font-size: larger;
+                            }
+                            .top_friends {
+                                margin: 0;
+                                padding: 0;
+                                li {
+                                    a {
+                                        font-size:small;
+                                        opacity: 0.5;
+                                        text-decoration: none;
+                                        color: white;
+                                    }
+                                }
+                            }
+                        }
+                        .support_bottom {
+                            text-align: left;
+                            width: 80%;
+                            h6 {
+                                color: white;
+                                font-size: large;
+                            }
+                            .bottom_register {
+                                margin-bottom: 2rem;
+                                border-radius: 0.5rem;
+                                background-color:#F85F89 ;
+                                height: 5rem;
+                                line-height: 5rem;
+                                width: 12rem;
+                                text-align: center;
+                                a {
+                                    color: white;
+                                    font-size: larger;
+                                    text-decoration: none;
+                                }
+                            }
+                            .bottom_login {
+                                border-radius: 0.5rem;
+                                background-color:white ;
+                                height: 5rem;
+                                line-height: 5rem;
+                                width: 12rem;
+                                text-align: center;
+                                a {
+                                    font-size: larger;
+                                    text-decoration: none;
+                                }
+                            }
+                        }
+                    }
+                    .legal {
+                        background-color: #2E313A;
+                        width: 100%;
+                        height: 10rem;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        .legal_content {
+                            width: 80%;
+                            p {
+                                text-align: left;
+                                color: white;
+                                opacity: 0.6;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+//1920---
+@media screen {
+    @media (min-width:1920px) {
+        html {
+            font-size: 12px;
+        }
+        .index {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            .nav {
+                position: relative;
+                height: 8rem;
+                width: 100%;    
+                line-height: 8rem;   
+                background-color: #272A33;
+                .logo {
+                    position: absolute;
+                    top: 1rem;
+                    left: 5rem;
+                    width: 18rem;
+                    height: 6rem;
+                    border: 0;
+                }
+                .ham {
+                    display: none;
+                }
+                .func_bar {
+                    display: none;
+                }
+            }
+            .main {
+                flex: 1;
+                overflow: auto;
+                .main_login {
+                    display: flex;
+                    align-items: center;
+                    background-size: cover;
+                    background-image: url('../../images/main_login.jpg');
+                    opacity: 0.8;
+                    width: 100%;
+                    height: 50rem;
+                    .login_content {
+                        margin: 0 auto;
+                        opacity: 1;
+                        width: 80%;
+                        .title {
+                            text-align: left;
+                            font-size: 4rem;
+                            font-weight: bolder;
+                            color: white;
+                        }
+                        .content {
+                            margin-top: 3rem;
+                            text-align: left;
+                            font-size: 2rem;
+                            color: white;
+                        }
+                        .bar {
+                            text-align: left;
+                            overflow: auto;
+                            margin-top: 5rem;
+                            height: 5rem;
+                            .bar_register {
+                                border-radius: 0.5rem;
+                                float: left;
+                                background-color:#F85F89 ;
+                                height: 5rem;
+                                line-height: 5rem;
+                                width: 12rem;
+                                text-align: center;
+                                a {
+                                    color: white;
+                                    font-size: larger;
+                                    text-decoration: none;
+                                }
+                            }
+                            .bar_login {
+                                margin-left: 5rem;
+                                border-radius: 0.5rem;
+                                float: left;
+                                background-color:white ;
+                                height: 5rem;
+                                line-height: 5rem;
+                                width: 12rem;
+                                text-align: center;
+                                a {
+                                    font-size: larger;
+                                    text-decoration: none;
+                                }
+                            }
+                        }
+                    }
+                }
+                .main_choose {
+                    background-image: url('../../images/main_login.jpg');
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    opacity: 0.8;
+                    width: 100%;
+                    height: 80rem;
+                    display: flex;
+                    align-items: center;
+                    .intro {
+                        margin: 0 auto;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: left;
+                        width: 80%;
+                        .intro_title {
+                            text-align: left;
+                            font-size: 4rem;
+                            font-weight: bolder;
+                            color: white;
+                        }
+                        .intro_content {
+                            margin-top: 3rem;
+                            text-align: left;
+                            font-size: 2rem;
+                            color: white;
+                        }
+                        .intro_example {
+                            padding: 0.7rem 0 0.7rem 2rem;
+                            margin-top: 3rem;
+                            text-align: left;
+                            font-size: 2rem;
+                            color: white;
+                        }
+                        .bar_register {
+                            border-radius: 0.5rem;
+                                float: left;
+                                background-color:#F85F89 ;
+                                height: 5rem;
+                                line-height: 5rem;
+                                width: 12rem;
+                                text-align: center;
+                                a {
+                                    color: white;
+                                    font-size: larger;
+                                    text-decoration: none;
+                                }
+                        }
+                    }
+                }
+                .main_buy {
+                    background-color: #FAFBFE;
+                    width: 100%;
+                    .buy_title {
+                        margin: 0 auto;
+                        margin-top: 2rem;
+                        text-align: center;
+                        font-size: 4rem;
+                        font-weight: bolder;
+                        color: black;
+                        height: 6rem;
+                        border-bottom: 0.5rem solid pink;
+                    }
+                    .buy_content {
+                        font-size: 2rem;
+                        margin: 2rem auto 1rem auto;
+                        width: 90%;
+                        text-align: center;
+                        color: #959CA4;
+                    }
+                    .buy_func {
+                        font-size: 2rem;
+                        list-style-type: none;
+                        .func_item {
+                            display: flex;
+                            align-items: center;
+                            flex-direction: row;
+                            img {
+                                width: 5rem;
+                                height: 5rem;
+                            }
+                            .item_intro {
+                                flex: 1;
+                                margin-left: 2rem;
+                                .intro_title {
+                                    text-align: left;
+                                    font-weight: bold;
+                                }
+                                .intro_content {
+                                    color: #959CA4;
+                                    text-align: left;
+                                }
+                            }
+                        }
+                    }
+                }
+                .main_join {
+                    //join 加入
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-image: url('../../images/index_join.jpg');
+                    background-repeat: no-repeat;
+                    opacity: 0.6;
+                    width: 100%;
+                    height: 100%;
+                    background-size: cover;
+                    margin-bottom: 0;
+                    .join {
+                        opacity: 1;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        .join_title {
+                            font-size: 4rem;
+                            margin: 0 auto;
+                            margin-top: 2rem;
+                            text-align: center;
+                            font-weight: bolder;
+                            color: white;
+                            height: 6rem;
+                        }
+                        .join_content {
+                            font-size: 2rem;
+                            color: black;
+                            font-weight: bold;
+                        }
+                        .join_btn {
+                            border-radius: 5px;
+                            float: left;
+                            background-color:#F85F89 ;
+                            height: 5rem;
+                            line-height: 5rem;
+                            width: 12rem;
+                            text-align: center;
+                            a {
+                                color: white;
+                                font-size: larger;
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+                .bottom {
+                    background-color: #272A33;
+                    width: 100%;
+                    .support {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        .support_top {
+                            text-align: left;
+                            width: 80%;
+                            .top_logo {
+                                width: 18.2rem;
+                                height: 6rem;
+                            }
+                            .top_title_1 {
+                                color: white;
+                                font-size: larger;
+                            }
+                            .top_connect {
+                                margin: 0;
+                                padding: 0;
+                                li {
+                                    a {
+                                        font-size:small;
+                                        opacity: 0.5;
+                                        text-decoration: none;
+                                        color: white;
+                                    }
+                                }
+
+                            }
+                            .top_title_2 {
+                                color: white;
+                                font-size: larger;
+                            }
+                            .top_friends {
+                                margin: 0;
+                                padding: 0;
+                                li {
+                                    a {
+                                        font-size:small;
+                                        opacity: 0.5;
+                                        text-decoration: none;
+                                        color: white;
+                                    }
+                                }
+                            }
+                        }
+                        .support_bottom {
+                            text-align: left;
+                            width: 80%;
+                            h6 {
+                                color: white;
+                                font-size: large;
+                            }
+                            .bottom_register {
+                                margin-bottom: 2rem;
+                                border-radius: 0.5rem;
+                                background-color:#F85F89 ;
+                                height: 5rem;
+                                line-height: 5rem;
+                                width: 12rem;
+                                text-align: center;
+                                a {
+                                    color: white;
+                                    font-size: larger;
+                                    text-decoration: none;
+                                }
+                            }
+                            .bottom_login {
+                                border-radius: 0.5rem;
+                                background-color:white ;
+                                height: 5rem;
+                                line-height: 5rem;
+                                width: 12rem;
+                                text-align: center;
+                                a {
+                                    font-size: larger;
+                                    text-decoration: none;
+                                }
+                            }
+                        }
+                    }
+                    .legal {
+                        background-color: #2E313A;
+                        width: 100%;
+                        height: 10rem;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        .legal_content {
+                            width: 80%;
+                            p {
+                                text-align: left;
+                                color: white;
+                                opacity: 0.6;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -20,12 +20,23 @@ interface Props{
 
 const Index:React.FC<Props>=(props)=>{
     // let list_1=React.createRef();
+    let [bar,setBar]=React.useState(false);
 
-    //事件处理函数
-   
+    //事件处理函数-----------------------------------
+    //控制bar显示
+    function hide_bar() {
+        setBar(!bar)
+    }
+    //监听页面滑动隐藏bar
+    function click_hide(e:any) {
+        setBar(false)
+    }
+
+
     React.useEffect(() => {
         
     }, [])
+    
 
 
 
@@ -33,10 +44,21 @@ const Index:React.FC<Props>=(props)=>{
         <div className={style.index}>
             <nav className={style.nav}>
                 <img className={style.logo} src={Logo}></img>
-                <img className={style.ham} src={Ham}></img>
+                <img className={style.ham} src={Ham} onClick={hide_bar}></img>
+                {bar?
+                <div className={style.func_bar}>
+                    <ul className={style.bar_list}>
+                        <li className={style.list_item}><a href="#main_login">简介</a></li>
+                        <li className={style.list_item}><a href="#main_choose">我们的目的</a></li>
+                        <li className={style.list_item}><a href="#main_buy">平台功能</a></li>
+                        <li className={style.list_item}><a href="#main_join">注册并加入</a></li>
+                        <li className={style.list_item}><a href="#bottom">法律信息</a></li>
+                    </ul>
+                </div>
+                :''}
             </nav>
-            <div className={style.main}>
-                <section className={style.main_login}>
+            <div className={style.main} onClick={click_hide}>
+                <section id={'main_login'} className={style.main_login}>
                     <div className={style.login_content}>
                         <h1 className={style.title}>
                             {'做工大最有趣的物品布告栏'}
@@ -50,7 +72,7 @@ const Index:React.FC<Props>=(props)=>{
                         </div>
                     </div>
                 </section>
-                <div className={style.main_choose}>
+                <div id={'main_choose'} className={style.main_choose}>
                     <section className={style.intro}>
                             <h2 className={style.intro_title}>{'为什么会诞生这个平台'}</h2>
                             <p className={style.intro_content}>
@@ -66,8 +88,8 @@ const Index:React.FC<Props>=(props)=>{
                             </div>
                     </section>
                 </div>
-                <section className={style.main_buy}>
-                    <h3 className={style.buy_title}>{'平台功能具有的功能'}</h3>
+                <section id={'main_buy'} className={style.main_buy}>
+                    <h3 className={style.buy_title}>{'平台具有的功能'}</h3>
                     <p className={style.buy_content}>{'用户只要使用学号进行注册登录，无需经过复杂的流程，即可手机拍照上传二手闲置物品达成包括发布个人二手物品和发布求购贴等核心功能。校内交易让闲置的宝贝以最快的速度奔赴新主人手中物尽其用。'}</p>
                     <ul className={style.buy_func}>
                         <li className={style.func_item}>
@@ -93,20 +115,20 @@ const Index:React.FC<Props>=(props)=>{
                         </li>    
                     </ul>
                 </section>
-                <section className={style.main_join}>
+                <section id={'main_join'} className={style.main_join}>
                     <div className={style.join}>
                         <h4 className={style.join_title}>{'现在就开始'}</h4>
                         <p className={style.join_content}>{'让我们和合作伙伴一同呈现 满足您的信息服务'}</p>
                         <div className={style.join_btn}><a href="/register">{'注册并加入'}</a></div>
                     </div>
                 </section>
-                <section className={style.bottom}>
+                <section id={'bottom'} className={style.bottom}>
                     <footer className={style.support}>
                         <section className={style.support_top}>
                             <img className={style.top_logo} src={Logo} alt=""/>
                             <h5 className={style.top_title_1}>{'Wanted & Selling 维护人员'}</h5>
                             <ul className={style.top_connect}>
-                                <li><a href="">{'>橘猫粒粒 GitHub'}</a></li>
+                                <li><a href="https://github.com/Jumaolili">{'>橘猫粒粒 GitHub'}</a></li>
                                 <li><a href="">{'>联系站长'}</a></li>
                             </ul>
                             <h6 className={style.top_title_2}>{'我们的合作伙伴'}</h6>

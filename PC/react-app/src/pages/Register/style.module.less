@@ -1,0 +1,196 @@
+html {
+    font-size: 30px;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-color: #b8e5f8;
+    background-size: cover;
+    background-image: url(../../images/login_bg.png) ;
+    overflow: auto;
+    .form_container {
+        margin-top: 12rem;
+        background-color: white;
+        width: 20rem;
+        height: 25rem;
+        .title {
+            position: relative;
+            height: 4rem;
+            img {
+                height: 3rem;
+            }
+            p {
+                position: relative;
+                top: -1rem;
+                font-size: 0.6rem;
+                font-weight: bold;
+            }
+            
+        }
+        .form {
+            height: 10rem;
+            .account {
+                text-align: left;
+                padding-left: 0.5rem;
+                position: relative;
+                input {
+                    //18.5
+                    width: 12rem;
+                    height: 1.8rem;
+                    margin-top: 1rem;
+                    margin-bottom: 1rem;
+                    padding-left: 0.5rem;
+                    border: 0;
+                    border-radius: 0.3rem 0 0 0.3rem;
+                    outline: none;
+                    background-color:  #F0F3F8;
+                    font-size: 0.8rem;
+                    color: #595959;
+                }
+                .emailType {
+                    position: absolute;
+                    top: 1rem;
+                    right: 0.5rem;
+                    width: 6.5rem;
+                    height: 1.9rem;
+                    overflow: auto;
+                    line-height: 1.9rem;
+                    border-radius: 0 0.3rem 0.3rem 0;
+                    background-color: #F0F3F8;
+                    font-size: 0.8rem;
+                    text-align: center;
+                    color: #595959;
+                    cursor: pointer;
+                    &:hover {
+                        background-color: #E8F0FE;
+                    }
+                }
+            }
+            .get_code {
+                text-align: left;
+                padding-left: 0.5rem;
+                position: relative;
+                input {
+                    //18.5
+                    width: 14rem;
+                    height: 1.8rem;
+                    margin-bottom: 1rem;
+                    padding-left: 0.5rem;
+                    border: 0;
+                    border-radius: 0.3rem;
+                    outline: none;
+                    background-color:  #F0F3F8;
+                    font-size: 0.8rem;
+                    color: #595959;
+                }
+                .send_code {
+                    position: absolute;
+                    top: 0rem;
+                    right: 0.5rem;
+                    width: 3.8rem;
+                    height: 1.9rem;
+                    line-height: 1.9rem;
+                    text-align: center;
+                    border-radius:  0.3rem ;
+                    background-color: #F85F89;
+                    font-size: 0.8rem;
+                    font-weight: bold;
+                    color: white;
+                    cursor: pointer;
+                    box-shadow: 0 0.25rem 0.75rem rgb(4 65 134 / 25%);
+                    transition: 0.5 ease-in-out;
+                    transition: color .15s ease-in-out,
+                                background-color .15s ease-in-out,
+                                box-shadow .15s ease-in-out,
+                                transform .12s ease-out;
+                    &:hover {
+                        background-color: #0498FA;
+                        transform: translateY(-0.1rem);
+                    }
+                }
+            }
+            .password, .register_code {
+                input {
+                    width: 18.5rem;
+                    height: 1.8rem;
+                    padding-left: 0.5rem;
+                    margin-bottom: 1rem;
+                    border-radius: 0.3rem;
+                    border: 0;
+                    outline: none;
+                    background-color: #E8F0FE;
+                    font-size: 0.8rem;
+                    color: #595959;
+                }
+            }
+            .register {
+                height: 1.8rem;
+                line-height: 1.8rem;
+                text-align: center;
+                width: 19rem;
+                margin: 0 auto;
+                border-radius: 0.3rem;
+                border: 0;
+                background-color: #F85F89;
+                color: white;
+                font-size: 0.6rem;
+                font-weight: bold;
+                cursor: pointer;
+                box-shadow: 0 0.25rem 0.75rem rgb(4 65 134 / 25%);
+                transition: 0.5 ease-in-out;
+                transition: color .15s ease-in-out,
+                            background-color .15s ease-in-out,
+                            box-shadow .15s ease-in-out,
+                            transform .12s ease-out;
+                &:hover {
+                    background-color: #0498FA;
+                    transform: translateY(-0.1rem);
+                }
+            }
+            .functions {
+                a {
+                    text-decoration: none;
+                    font-size: 0.5rem;
+                    font-weight: bold;
+                    color: #6C757D;
+                    margin: 0.5rem;
+                    &:hover {
+                        color: #454545;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+//0-450
+@media screen {
+    @media (max-width: 450px) and (min-width:0px) {
+        html {
+            font-size: 20px;
+        }
+    }
+}
+
+
+
+//450-762 -920
+@media screen {
+    @media (max-width: 920px) and (min-width:450px) {
+        html {
+            font-size: 20px;
+        }
+    }
+}
+
+//920-1366
+
+//1366-1920
+
+//1920---

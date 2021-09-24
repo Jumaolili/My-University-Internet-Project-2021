@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useRef} from 'react';
 import ReactDOM from 'react-dom';
 import style from './style.module.less';
 import {useLocalObservable, useObserver, Observer} from 'mobx-react';
@@ -21,6 +21,8 @@ interface Props{
 const Index:React.FC<Props>=(props)=>{
     // let list_1=React.createRef();
     let [bar,setBar]=React.useState(false);
+    //锚点Ref
+    let main_login=useRef(null);
 
     //事件处理函数-----------------------------------
     //控制bar显示
@@ -31,6 +33,8 @@ const Index:React.FC<Props>=(props)=>{
     function click_hide(e:any) {
         setBar(false)
     }
+    //点击导航栏，平滑过渡
+    
 
 
     React.useEffect(() => {
@@ -44,6 +48,13 @@ const Index:React.FC<Props>=(props)=>{
         <div className={style.index}>
             <nav className={style.nav}>
                 <img className={style.logo} src={Logo}></img>
+                <ul className={style.top_bar}>
+                    <li><a href="#main_login">简介</a></li>
+                    <li><a href="#main_choose">我们的目的</a></li>
+                    <li><a href="#main_buy">平台功能</a></li>
+                    <li><a href="#main_join">注册并加入</a></li>
+                    <li><a href="#bottom">法律信息</a></li>
+                </ul>
                 <img className={style.ham} src={Ham} onClick={hide_bar}></img>
                 {bar?
                 <div className={style.func_bar}>
@@ -58,7 +69,7 @@ const Index:React.FC<Props>=(props)=>{
                 :''}
             </nav>
             <div className={style.main} onClick={click_hide}>
-                <section id={'main_login'} className={style.main_login}>
+                <section id={'main_login'}  className={style.main_login}>
                     <div className={style.login_content}>
                         <h1 className={style.title}>
                             {'做工大最有趣的物品布告栏'}

@@ -15,53 +15,58 @@ html {
     .form_container {
         margin-top: 12rem;
         background-color: white;
-        width: 20rem;
-        height: 25rem;
+        width: 40rem;
+        border-radius: 1rem;
         .title {
             position: relative;
-            height: 4rem;
+            height: 10rem;
             img {
-                height: 3rem;
+                height: 7rem;
             }
             p {
                 position: relative;
-                top: -1rem;
-                font-size: 0.6rem;
+                top: -3rem;
+                font-size: 1rem;
                 font-weight: bold;
             }
             
         }
         .form {
-            height: 10rem;
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
             .account {
-                text-align: left;
+                flex: 1;
+                display: flex;
+                flex-direction: row;
                 padding-left: 0.5rem;
                 position: relative;
                 input {
-                    //18.5
-                    width: 12rem;
-                    height: 1.8rem;
+                    flex: 1;
+                    width: 32rem;
+                    height: 3.6rem;
                     margin-top: 1rem;
                     margin-bottom: 1rem;
-                    padding-left: 0.5rem;
+                    padding-left: 1rem;
                     border: 0;
                     border-radius: 0.3rem 0 0 0.3rem;
                     outline: none;
                     background-color:  #F0F3F8;
-                    font-size: 0.8rem;
+                    font-size: 1.5rem;
                     color: #595959;
                 }
                 .emailType {
-                    position: absolute;
-                    top: 1rem;
-                    right: 0.5rem;
-                    width: 6.5rem;
-                    height: 1.9rem;
                     overflow: auto;
-                    line-height: 1.9rem;
+                    margin-top: 1rem;
+                    padding: 0.1rem;
+                    flex: 1;
+                    width: 6rem;
+                    height: 3.6rem;
+                    border: none;
+                    line-height: 3.6rem;
                     border-radius: 0 0.3rem 0.3rem 0;
                     background-color: #F0F3F8;
-                    font-size: 0.8rem;
+                    font-size: 1.5rem;
                     text-align: center;
                     color: #595959;
                     cursor: pointer;
@@ -69,35 +74,42 @@ html {
                         background-color: #E8F0FE;
                     }
                 }
+                .chooseEmail {
+                    overflow: auto;
+                    z-index: 5;
+                    position: absolute;
+                    top: 4.8rem;
+                    right: 0rem;
+                    width: 12rem;
+                    background-color: white;
+                }
             }
             .get_code {
-                text-align: left;
+                flex: 1;
                 padding-left: 0.5rem;
-                position: relative;
+                display: flex;
+                flex-direction: row;
                 input {
-                    //18.5
-                    width: 14rem;
-                    height: 1.8rem;
+                    width: 25rem;
+                    height: 3.6rem;
                     margin-bottom: 1rem;
-                    padding-left: 0.5rem;
+                    padding-left: 01rem;
                     border: 0;
                     border-radius: 0.3rem;
                     outline: none;
                     background-color:  #F0F3F8;
-                    font-size: 0.8rem;
+                    font-size: 1.5rem;
                     color: #595959;
                 }
                 .send_code {
-                    position: absolute;
-                    top: 0rem;
-                    right: 0.5rem;
-                    width: 3.8rem;
-                    height: 1.9rem;
-                    line-height: 1.9rem;
+                    flex: 1;
+                    margin-left: 1rem;
+                    height: 3.6rem;
+                    line-height: 3.6rem;
                     text-align: center;
                     border-radius:  0.3rem ;
                     background-color: #F85F89;
-                    font-size: 0.8rem;
+                    font-size: 1.5rem;
                     font-weight: bold;
                     color: white;
                     cursor: pointer;
@@ -114,30 +126,32 @@ html {
                 }
             }
             .password, .register_code {
+                flex: 1;
                 input {
-                    width: 18.5rem;
-                    height: 1.8rem;
-                    padding-left: 0.5rem;
+                    width: 34rem;
+                    height: 3.6rem;
+                    padding-left: 1rem;
                     margin-bottom: 1rem;
                     border-radius: 0.3rem;
                     border: 0;
                     outline: none;
                     background-color: #E8F0FE;
-                    font-size: 0.8rem;
+                    font-size: 1.5rem;
                     color: #595959;
                 }
             }
             .register {
-                height: 1.8rem;
-                line-height: 1.8rem;
+                flex: 1;
+                height: 3.6rem;
+                line-height: 3.6rem;
                 text-align: center;
-                width: 19rem;
+                width: 35rem;
                 margin: 0 auto;
                 border-radius: 0.3rem;
                 border: 0;
                 background-color: #F85F89;
                 color: white;
-                font-size: 0.6rem;
+                font-size: 1.5rem;
                 font-weight: bold;
                 cursor: pointer;
                 box-shadow: 0 0.25rem 0.75rem rgb(4 65 134 / 25%);
@@ -152,9 +166,11 @@ html {
                 }
             }
             .functions {
+                flex: 1;
+                margin: 2rem;
                 a {
                     text-decoration: none;
-                    font-size: 0.5rem;
+                    font-size: 1.5rem;
                     font-weight: bold;
                     color: #6C757D;
                     margin: 0.5rem;
@@ -168,29 +184,3 @@ html {
 }
 
 
-
-//0-450
-@media screen {
-    @media (max-width: 450px) and (min-width:0px) {
-        html {
-            font-size: 20px;
-        }
-    }
-}
-
-
-
-//450-762 -920
-@media screen {
-    @media (max-width: 920px) and (min-width:450px) {
-        html {
-            font-size: 20px;
-        }
-    }
-}
-
-//920-1366
-
-//1366-1920
-
-//1920---
